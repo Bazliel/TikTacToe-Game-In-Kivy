@@ -1,0 +1,70 @@
+<Button>
+    font_size: 40
+
+
+<Game>
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+        GridLayout:
+            cols: 3
+            rows: 3
+
+            Button:
+                id: b1
+                on_release: root.on_press(b1)
+            
+            Button:
+                id: b2
+                on_release: root.on_press(b2)
+            
+            Button:
+                id: b3
+                on_release: root.on_press(b3)
+            
+            Button:
+                id: b4
+                on_release: root.on_press(b4)
+
+            Button:
+                id: b5
+                on_release: root.on_press(b5)
+            
+            Button:
+                id: b6
+                on_release: root.on_press(b6)
+            
+            Button:
+                id: b7
+                on_release: root.on_press(b7)
+            
+            Button:
+                id: b8
+                on_release: root.on_press(b8)
+            
+            Button:
+                id: b9
+                on_release: root.on_press(b9)
+
+        Label:
+            id: curr_turn
+            size_hint: (1, 0.1)
+            font_size: 26 
+
+<GameOver>
+    BoxLayout:
+        size: root.width, root.height
+        orientation: 'vertical'
+        spacing: 50
+        padding: 10
+
+        Label:
+            id: label
+            font_size: 32
+            text: ''
+        
+        Button: 
+            text: 'Restart'
+            size_hint: (1, 0.2)
+            on_release: root.switch_screen()
+                
